@@ -42,19 +42,23 @@ let greateworkImg = $('.greatwork-col')
 galleryFilter.addEventListener('click', (event) => {
   const filterValue = event.target.getAttribute('data-filter')
 
-  galleryFilter.querySelector('.active').classList.remove('active')
+  if(filterValue){
+    galleryFilter.querySelector('.active').classList.remove('active')
 
-  event.target.classList.add('active')
+    event.target.classList.add('active')
 
-  event.target.classList.add('active')
+    event.target.classList.add('active')
 
-  greateworkImg.each(each =>{
-    if(greateworkImg[each].classList.contains(filterValue) || filterValue === 'all'){
-      greateworkImg[each].classList.remove('hide')
-    } else {
-      greateworkImg[each].classList.add('hide')
-    }
-  })
+    greateworkImg.each(each =>{
+      if(greateworkImg[each].classList.contains(filterValue) || filterValue === 'all'){
+        greateworkImg[each].classList.remove('hide')
+      } else {
+        greateworkImg[each].classList.add('hide')
+      }
+    })
+  }
+
+
 })
 
 //change color of navbar
@@ -81,3 +85,4 @@ let navObserver = new IntersectionObserver(navIntersecp,navOptions)
 sections.each(section => {
   navObserver.observe(sections[section])
 })
+
