@@ -156,6 +156,10 @@ div.col-lg-3.col-md-6.greatwork-col{
   color: #edcf18;
 }
 
+#greatework a{
+  cursor: pointer;
+}
+
 a.nav-link.greatwork-tab.active:hover{
   color: #edcf18;
 }
